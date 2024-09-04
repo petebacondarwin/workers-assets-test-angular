@@ -1,0 +1,6 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "workers-assets-test-angular"
+compatibility_date = "2024-08-21"
+
+main = "./dist/cloudflare/_worker.js"
+experimental_assets = { directory = "./dist/cloudflare", binding = "ASSETS" }

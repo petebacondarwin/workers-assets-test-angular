@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "pnpm run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-09-03 --experimental-local",
+    "start": "pnpm run build && wrangler dev",
     "build": "ng build && pnpm run process",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:workers-assets-test-angular": "node dist/workers-assets-test-angular/server/server.mjs",
     "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
-    "deploy": "pnpm run build && wrangler pages deploy dist/cloudflare"
+    "deploy": "pnpm run build && wrangler deploy"
   },
   "private": true,
   "dependencies": {
